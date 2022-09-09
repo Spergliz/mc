@@ -31,15 +31,26 @@ function fishBtnClicked() {
   }
 }
 
-function catcher(cod,tropical,salmon){
-  let randNum = math.randNum();
-  
+function catcher(cod,salmon,tropical) {
+   let randNum = Math.random();
+   if (randNum < cod) {
+     numCod++;
+   numCodSpan.innerHTML = numCod;
+    resultImg.src = 'img/Raw-Cod.png';
+  } else if (randNum < salmon) {
+    numSalmon++;
+    numSalmonSpan.innerHTML = numSalmon;
+    resultImg.src = 'img/Raw-Salmon.png';
+  } else if (randNum < tropical ) {
+    numTropical++;
+    numTropicalSpan.innerHTML = numTropical;
+    resultImg.src = 'img/Tropical-Fish.png';
+  } else { 
+    numPuffer++;
+    numPufferSpan.innerHTML = numPuffer;
+    resultImg.src = 'img/Pufferfish.png';
+  }
 }
-
-
-
-
-
 
 // function stevefish(){
 //   let randNum = Math.random();
