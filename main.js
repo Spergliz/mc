@@ -32,7 +32,8 @@ function fishBtnClicked() {
 }
 
 function catcher(cod,tropical,salmon){
-  console.log(cod, tropical, salmon)
+  let randNum = math.randNum();
+  
 }
 
 
